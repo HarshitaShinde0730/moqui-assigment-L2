@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/rest-api-3.xsd"
+          name="example" displayName="Example REST API" version="2.0.0">
+
+    <resource name="example" require-authentication="anonymous-view">
+        <method type="get"><entity name="example" operation="list"/></method>
+        <method type="post"><service name="example.ExampleService.create#Example"/></method>
+
+        <id name="ExampleId">
+            <method type="get"><entity name="example" operation="one"/></method>
+            <method type="put"><service name="example.ExampleService.update#Example"/></method>
+            <method type="patch"><service name="example.ExampleService.update#Example"/></method>
+        </id>
+
+        <id name="ExampleIdDelete">
+            <method type="get"><entity name="example" operation="one"/></method>
+            <method type="put"><service name="example.ExampleService.delete#Example"/></method>
+            <method type="patch"><service name="example.ExampleService.delete#Example"/></method>
+        </id>
+    </resource>
+
+</resource>
+

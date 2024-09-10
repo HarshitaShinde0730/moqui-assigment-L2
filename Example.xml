@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xsi:noNamespaceSchemaLocation="http://moqui.org/xsd/entity-definition-2.1.xsd">
+    <entity entity-name="example" package="com.example">
+        <field name="ExampleId" type="id" is-pk="true"/>
+        <field name="Example name" type="text-long"/>
+        <field name="Example date" type="date-time"/>
+        <field name="Example price" type="number-decimal"/>
+        <field name="Example quality" type="number-decimal"/>
+    </entity>
+</entities>
